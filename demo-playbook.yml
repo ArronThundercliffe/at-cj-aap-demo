@@ -1,6 +1,9 @@
 ---
 - hosts: localhost
   tasks:
+  - name: debug stuff
+    debug:
+      msg: "{{ CONJUR_ACCOUNT }}"
   - name: Lookup variable in Conjur
     debug:
       msg: "{{ lookup('cyberark.conjur.conjur_variable', 'data/vault/at-ansible-safe/Operating System-WinDomain-target.cybr.com-ansible-svc-acc/password') }}"
