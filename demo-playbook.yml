@@ -3,7 +3,7 @@
   tasks:
   - name: debug stuff
     debug:
-      msg: "{{ CONJUR_ACCOUNT }}"
+      msg: "{{ CONJUR_APPLIANCE_URL }}"
   - name: Lookup variable in Conjur
     debug:
       msg: "{{ lookup('cyberark.conjur.conjur_variable', 'data/vault/at-ansible-safe/Operating System-WinDomain-target.cybr.com-ansible-svc-acc/password') }}"
